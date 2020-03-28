@@ -83,3 +83,10 @@
             if (keptn_result == "fail") {
             error("Keptn_eval:${keptn_result}")
             }
+def get_timestamp(){
+    DATE_TAG = java.time.LocalDate.now()
+    DATETIME_TAG = java.time.LocalDateTime.now()
+    //echo "${DATETIME_TAG}
+                
+  return DATETIME_TAG
+     
