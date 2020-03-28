@@ -30,14 +30,12 @@
              """
             // "labels": {"environment": "yourenv","yourney": "youryourney"}
              
-    
             //Post the start-evaluation event to Keptn API
             def kept_context_request = httpRequest contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: true, name: 'x-token', value: "${env.KEPTN_API_TOKEN}"]], httpMode: 'POST', requestBody: keptn_json, responseHandle: 'STRING', url: "${env.KEPTN_ENDPOINT}/v1/event", validResponseCodes: "100:404"
             
             //Parse response String 
             con_response = new JsonSlurperClassic().parseText( kept_context_request.getContent() )
-
-          
+        
             // Get the keptnContext Key
             keptn_context_key = con_response.get("keptnContext")
            
