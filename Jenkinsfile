@@ -1,7 +1,4 @@
             println  "About to execute keptn evaluation"
-           
-
-                
             //Get the start time of the test
             def startTime =  get_timestamp()
             
@@ -66,12 +63,8 @@
                             } 
                   }
 
-
-                    }
+               }
             }
-
-
-           
             //println(kept_status_request.getContent())
             //Parse response String
             result_response = new JsonSlurperClassic().parseText( kept_status_request.getContent() )
